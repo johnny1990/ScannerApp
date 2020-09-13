@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ScannerApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="123*"/>
+            <ColumnDefinition Width="274*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnPreview" Content="&lt;" Grid.Column="1" HorizontalAlignment="Left" Margin="328.4,19,0,0" VerticalAlignment="Top" Width="54" Click="Button_Click_1"/>
+        <Button x:Name="btnNext" Content="&gt;" Grid.Column="1" HorizontalAlignment="Left" Margin="382.4,19,0,0" VerticalAlignment="Top" Width="48" Click="Button_Click_2"/>
+        <Image x:Name="pic_scan" Grid.Column="1" HorizontalAlignment="Left" Height="263" Margin="31.4,67,0,0" VerticalAlignment="Top" Width="507"/>
+        <Label x:Name="lbl_message" Content="Label" HorizontalAlignment="Left" Margin="201,371,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="205"/>
+        <ProgressBar x:Name="ProgressBar1" HorizontalAlignment="Left" Height="19" Margin="130.4,19,0,0" VerticalAlignment="Top" Width="140" Grid.Column="1"/>
+        <Button x:Name="btnScan" Content="Scan" HorizontalAlignment="Left" Margin="59,30,0,0" VerticalAlignment="Top" Width="110" Height="37" Click="Button_Click"/>
+        <Button x:Name="btnAttach" Content="Attach" HorizontalAlignment="Left" Margin="59,85,0,0" VerticalAlignment="Top" Width="110" Height="37" Click="Button_Click_3"/>
+
     </Grid>
 </Window>
